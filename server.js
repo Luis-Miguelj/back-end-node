@@ -5,6 +5,10 @@ import { DatabasePostgres } from './database-postgres.js'
 
 const server = fastify()
 
+server.register(cors, {
+  origin: 'http://localhost:3000/'
+})
+
 const database = new DatabasePostgres()
 //POST http://localhost:3333/videos
 
@@ -50,9 +54,6 @@ server.delete('/videos/:id', async (request, response)=>{
   return response.status(204).send()
 })
 
-server.register(cors, {
-  origin: 'http://localhost:3000/'
-})
 
 server.listen({
   host: '0.0.0.0',
