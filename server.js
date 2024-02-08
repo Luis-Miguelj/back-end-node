@@ -1,4 +1,5 @@
 import { fastify } from 'fastify'
+import cors from '@fastify/cors'
 import { DatabaseMemory } from './database-memory.js'
 import { DatabasePostgres } from './database-postgres.js'
 
@@ -47,6 +48,10 @@ server.delete('/videos/:id', async (request, response)=>{
   await database.delete(videosId)
 
   return response.status(204).send()
+})
+
+server.register(cors, {
+  origin: 'http://localhost:3000/'
 })
 
 server.listen({

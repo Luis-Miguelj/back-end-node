@@ -1,4 +1,4 @@
-POST http://localhost:3333/videos
+POST https://back-end-node-0q5p.onrender.com/videos
 Content-Type: application/json
 
 {
@@ -8,11 +8,11 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3333/videos
+GET https://back-end-node-0q5p.onrender.com/videos
 //?search=SQL
 
 ###
-PUT http://localhost:3333/videos/93df7122-5d13-4eb0-a944-1c801c54784e
+PUT https://back-end-node-0q5p.onrender.com/videos/93df7122-5d13-4eb0-a944-1c801c54784e
 Content-Type: application/json
 
 {
@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3333/videos/b15de434-3a57-4ce5-bc16-629bf08d0331
+DELETE https://back-end-node-0q5p.onrender.com/videos/b15de434-3a57-4ce5-bc16-629bf08d0331
